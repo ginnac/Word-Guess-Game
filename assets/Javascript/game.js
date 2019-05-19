@@ -21,7 +21,7 @@ document.getElementById("start").innerHTML = "Game has started!";
         var feels = ["F","e","e","l","s"];
         
     
-    //loop for the song array
+    //loop for the song array???
     for (i = 0; i <songs.length; i++) {
         
       }
