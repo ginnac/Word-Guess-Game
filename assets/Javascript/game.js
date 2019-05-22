@@ -13,19 +13,94 @@
     //call function
 
 //player wins when//
+
 //-Array of name of song??
     var songs = ["despacito", "firework", "feels"];
-        //maybe Array for letters of each song name??
-        // var despacito = ["D","e","s","p","a","c","i","t","o"];
-        // var firework = ["F","i","r","e","w","o","r","k"];
-        // var feels = ["F","e","e","l","s"];
-        // var line = ["_"]
+    var lines = []
+    var correctGuesses =[]
+    var incorrectGuesses = []
+       
 
-//-need it to go 
-        
+//-Function to randomly choose an index from my array
+
  var randomSong= songs[Math.floor(Math.random()*songs.length)];
- var lines = randomSong.replace(/[a-z]/g, ' _ ')
- document.getElementById("word").innerHTML = lines;
+
+ //printing to the console (testing)
+
+ console.log(randomSong);
+
+
+// - Function to create an Array for random song letters, they were pushed as _
+ //...var lines = randomSong.replace(/[a-z]/g, ' _ ') .....could be used????
+function createUnderscores(){
+    for (var i=0;i<randomSong.length;i++){
+        lines.push("_");}
+
+        return lines;
+}
+
+//printing to the console (testing)
+
+console.log(createUnderscores());
+
+console.log(lines);
+
+// taking guesses from user and accepting true values 
+
+document.addEventListener("keypress", function(event){
+    var code = event.keyCode 
+    var letter = String.fromCharCode(code);
+    var receivedGuess =letter.toLowerCase();
+    console.log(receivedGuess);
+
+    if(randomSong.indexOf(receivedGuess) > -1){
+       
+//printing to the console (testing)
+        console.log(true);
+
+// storing right guesses and attempting to convert them to receivedGuess (user input)
+    
+        correctGuesses.push(receivedGuess);
+
+        lines[randomSong.indexOf(receivedGuess)] = receivedGuess;
+     
+        if (lines.join("") === randomSong){
+
+        //testing alert (testing)
+        alert ("yey!");
+
+    }
+
+    }
+
+    else {
+//printing to console (testing)
+        console.log(false);
+
+// pushing them to incorrectGuesses array so they all can be displayed
+
+        incorrectGuesses.push(receivedGuess);
+        alert ("wrong guess!");
+
+
+    }
+});
+
+
+     
+
+
+   
+
+
+
+
+ //console.log(lines)
+
+//  document.getElementById("word").innerHTML = lines;
+
+
+ //- Press a key letter and replace _ with correct letter 
 
 
 
