@@ -90,6 +90,8 @@ if(guessesremaining <= 0){
     incorrectGuesses = []
     div =""
     allGuesses =[]
+    guessesremaining = 7;
+
     // clearing randomSong
     div.replace(randomSong,"")
     // choosing a diferent randonSong
@@ -128,6 +130,7 @@ correctGuesses =[]
 incorrectGuesses = []
 div =""
 allGuesses =[]
+guessesremaining = 7;
 // clearing randomSong
 div.replace(randomSong,"")
 // choosing a diferent randonSong
