@@ -24,6 +24,7 @@ for (var i=0;i<randomSong.length;i++) {
 document.getElementById("word").innerHTML = div;
 
 
+
 // taking key guesses from user 
 
 document.addEventListener("keypress", function key(event){
@@ -81,8 +82,37 @@ console.log(guessesremaining);
 
 if(guessesremaining <= 0){
 alert("Game Over");
-//reloading page to let user start again...
-window.location.reload();
+if(guessesremaining <= 0){
+    //testing it works
+    alert("Game Over");
+  //emptying arrays to start guesses again..
+    correctGuesses =[]
+    incorrectGuesses = []
+    div =""
+    allGuesses =[]
+    // clearing randomSong
+    div.replace(randomSong,"")
+    // choosing a diferent randonSong
+    randomSong = songs[Math.floor(Math.random()*songs.length)];
+    // console.log(yey);
+    
+    // console.log(emptyingRandomSong);
+    // console.log(div+= "");
+    
+    //looping to go get each letter from the word..
+    
+    for (var i=0;i<randomSong.length;i++) {
+        
+        // printing it in the DOM
+        div+= "<span data-name =" +  randomSong.charAt(i) + ">" + " _ " +"</span>"; }
+    
+    
+    //shorting down getElementById("word")....
+    document.getElementById("word").innerHTML= div ;
+
+
+}
+
 }
 
 }
@@ -92,12 +122,34 @@ window.location.reload();
 if(randomSong.length === correctGuesses.length){
 points = points + 1;
 alert("You Won!");
-window.location.reload();
+//window.location.reload();
+
+correctGuesses =[]
+incorrectGuesses = []
+div =""
+allGuesses =[]
+// clearing randomSong
+div.replace(randomSong,"")
+// choosing a diferent randonSong
+randomSong = songs[Math.floor(Math.random()*songs.length)];
+// console.log(yey);
+
+// console.log(emptyingRandomSong);
+// console.log(div+= "");
+
+//looping to go get each letter from the word..
+
+for (var i=0;i<randomSong.length;i++) {
+    
+    // printing it in the DOM
+    div+= "<span data-name =" +  randomSong.charAt(i) + ">" + " _ " +"</span>"; }
+
+
+//shorting down getElementById("word")....
+document.getElementById("word").innerHTML= div ;
 
 
 }
-
-
 
 //printing incorrect letters..
 
@@ -111,11 +163,13 @@ document.getElementById("guessesRemaining").innerHTML = guessesremaining;
 
 document.getElementById("pointsCounter").innerHTML = points;
 
-
-
 }
 
 );
+
+
+
+
 
 
 
