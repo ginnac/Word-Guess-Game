@@ -1,4 +1,31 @@
-body{
-    background-image: url(" .../images/memphis-colorful.png ");
 
+
+
+
+body,html{
+    background-image: url(" ../images/memphis-colorful.png ");
+
+}
+
+#game {
+    color: #cc0099;
+    
+}
+
+
+div{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+}
+
+p,#word{
+    color: black;
 }

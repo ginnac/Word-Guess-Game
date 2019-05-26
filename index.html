@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Document</title> 
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="spreadsheet" href="assets/css/reset.css">
-    <link rel="spreadsheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     
 </head>
-<body id="start game">
-<h2 id="start">Press any key o get started!</h2>
-<h6 id="winner">wins:</h6>
-<h5>Current Word</h5>
-<p id="word"></p>
-<h6>Number of guesses remaining</h6>
-<h6 id="wronglettersguessed">Letters already Guessed</h6>
+
+
+<body id="game">
+<div>
+<h3 id="start">Guess and then press key to get started!</h3>
+<h6> # of wins:</h6>
+<p id="pointsCounter"></p>
+<h4>Current Word</h4>
+<h1 id="word"></h1>
+<h4>Number of guesses remaining</h4>
+<p id="guessesRemaining"></p>
+<h4>Letters already Guessed</h4>
+<p id="incorrectLettersGroup"> </p>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
