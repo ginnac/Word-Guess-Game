@@ -8,17 +8,20 @@ body,html{
 }
 
 #game {
-    color: #cc0099;
+    color:white;
     
 }
 
 
-div{
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        /* bring your own prefixes */
-        transform: translate(-50%, -50%);
+.box{
+     position: absolute;
+        /* overflow:hidden; */
+        top: 170px;
+        margin-left: 5%;
+        width:90%;
+        margin-right:0px;
+    
+
 }
 
 h2{
@@ -26,6 +29,92 @@ h2{
     justify-content: center;
 }
 
-p,#word{
-    color: black;
+.words{
+    padding-left:15%; 
+
+}
+#start{
+    background-color: black;
+}
+
+.vid{
+    padding-left: 8%;
+}
+
+@media only screen and (max-width: 980px){
+    
+    .box{
+        position: absolute;
+           /* overflow:hidden; */
+           top: 70%;
+           margin-left: 5%;
+           width:90%;
+           margin-right:0px;
+
+        background-color: black;
+        padding:3%;
+   
+   }
+
+   
+#game {
+    color:rgb(118, 238, 48);
+    
+}
+
+.words{
+    padding-left:3%; 
+}
+
+.vid{
+    padding-left: 2%;
+}
+
+
+}
+@media only screen and (max-width: 768px){
+    .box{
+        position: absolute;
+           /* overflow:hidden; */
+           top: 75%;
+           margin-left: 5%;
+           width:90%;
+           margin-right:0px;
+   
+   }
+
+   
+#game {
+    color:rgb(118, 238, 48);
+    
+}
+
+.words{
+    padding-left:3%; 
+}
+
+}
+@media only screen and (max-width: 640px){
+
+    .box{
+        position: absolute;
+           /* overflow:hidden; */
+           top: 50%;
+           margin-left: 5%;
+           width:90%;
+           margin-right:0px;
+   
+   }
+
+   
+#game {
+    color:rgb(118, 238, 48);
+    
+}
+
+.words{
+    padding-left:3%; 
+}
+
+
 }

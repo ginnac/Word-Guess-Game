@@ -13,18 +13,39 @@
 
 
 <body id="game">
-    <div>
-        <h3 id="start">Guess and then press key to get started!</h3>
+        <video class = "w-100" loop autoplay muted controls>
+                <source type="video/mp4" src="assets/images/megahit1.mp4"></source>
+       </video>
+<div class="row box">
+       <div class= ".col-12 .col-sm-12 .col-md-6 vid">
+
+            <h3 id="name-of-the-song"> </h3>
+
+            <div id="randomsongs">
+            
+                <iframe class="w-100"src="https://player.vimeo.com/video/270592493?autoplay=1&loop=1"frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+            </div>
+
+        </div>
+
+               
+     <div class=".col-12 .col-sm-12 .col-md-6 words">
+         
+        <h2 id="start">Press a key to get started!</h2>
         <h6> # of wins:</h6>
         <p id="pointsCounter"></p>
         <h4>Current Word</h4>
         <h1 id="word"></h1>
-        <h4>Number of guesses remaining</h4>
+        <h4>Guesses remaining</h4>
         <p id="guessesRemaining"></p>
         <h4>Letters already Guessed</h4>
         <p id="incorrectLettersGroup"> </p>
-    </div>
+    
+</div>
 
+    
+      
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

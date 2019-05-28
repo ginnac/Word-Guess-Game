@@ -1,7 +1,7 @@
 
 
 //Arrays - list of songs, and empty arrays where to push values...
-var songs = ["despacito", "firework", "feels"];
+var songs = ["despacito", "finesse","dura", "medicina", "promises","mia", "friends"];
 var guessesremaining = 7;
 var correctGuesses =[]
 var incorrectGuesses = []
@@ -9,6 +9,10 @@ var div =""
 var allGuesses =[]
 var points= 0;
 let uniqueArray = []
+
+
+//hidding video to play when user guesses the name of the song...
+document.getElementById("randomsongs").hidden = true
 
 //Math.random applied to randomly choose an index from my songs array
 var randomSong= songs[Math.floor(Math.random()*songs.length)];
@@ -19,6 +23,65 @@ for (var i=0;i<randomSong.length;i++) {
 
 //shorting the getElementById function...
 document.getElementById("word").innerHTML = div;
+
+
+
+//function to call when the letters of the song has been guessed...
+function songplaying(){
+    //playing Calypso song, when user guessed it...
+    if(randomSong==="finesse"){
+
+        document.querySelector("#randomsongs > iframe").src = "https://player.vimeo.com/video/331034705?autoplay=1&loop=1";
+        document.getElementById("randomsongs").hidden = false;
+        document.getElementById("name-of-the-song").innerHTML = randomSong.toUpperCase();
+     } 
+
+     //playing despacito song when user has guessed it
+    
+    if(randomSong==="despacito"){
+        
+        document.querySelector("#randomsongs > iframe").src = "https://player.vimeo.com/video/270592493?autoplay=1&loop=1";
+        document.getElementById("randomsongs").hidden = false;
+        document.getElementById("name-of-the-song").innerHTML = randomSong.toUpperCase();
+    }       
+
+    if(randomSong==="dura"){
+        
+        document.querySelector("#randomsongs > iframe").src = "https://player.vimeo.com/video/257448928?autoplay=1&loop=1";
+        document.getElementById("randomsongs").hidden = false;
+        document.getElementById("name-of-the-song").innerHTML = randomSong.toUpperCase();
+    }   
+
+    if(randomSong==="promises"){
+        
+        document.querySelector("#randomsongs > iframe").src = "https://player.vimeo.com/video/101438997?autoplay=1&loop=1";
+        document.getElementById("randomsongs").hidden = false;
+        document.getElementById("name-of-the-song").innerHTML = randomSong.toUpperCase();
+    }   
+
+    if(randomSong==="medicina"){
+        
+        document.querySelector("#randomsongs > iframe").src = "https://player.vimeo.com/video/283129518?autoplay=1&loop=1";
+        document.getElementById("randomsongs").hidden = false;
+        document.getElementById("name-of-the-song").innerHTML = randomSong.toUpperCase();
+    }  
+    
+    if(randomSong==="mia"){
+        
+        document.querySelector("#randomsongs > iframe").src = "https://player.vimeo.com/video/295060865?autoplay=1&loop=1";
+        document.getElementById("randomsongs").hidden = false;
+        document.getElementById("name-of-the-song").innerHTML = randomSong.toUpperCase();
+    } 
+
+    if(randomSong==="friends"){
+        
+        document.querySelector("#randomsongs > iframe").src = "https://player.vimeo.com/video/273255630?autoplay=1&loop=1";
+        document.getElementById("randomsongs").hidden = false;
+        document.getElementById("name-of-the-song").innerHTML = randomSong.toUpperCase();
+    } 
+}
+
+//.............................................
 
 
 // function to take key guesses from user 
@@ -101,6 +164,7 @@ var receivedGuess =letter.toLowerCase();
 
     }
 
+
     // when user wins...
     //comparing randomSong letters with correct guesses, compare their length to achieve this....
     if(randomSong.length === correctGuesses.length){
@@ -110,12 +174,16 @@ var receivedGuess =letter.toLowerCase();
     
         //emptying arrays to start receiving new guesses for a new randomSong..
 
+
         correctGuesses =[]
         incorrectGuesses = []
         div =""
         allGuesses =[]
         guessesremaining = 7;
-        
+
+        //applying songplaying function...
+        songplaying();
+
         // clearing randomSong
         div.replace(randomSong,"")
         
@@ -130,6 +198,10 @@ var receivedGuess =letter.toLowerCase();
             
             //shorting down getElementById("word")....
             document.getElementById("word").innerHTML= div ;
+        
+       
+           
+
     
     }
 
